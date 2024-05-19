@@ -1,0 +1,46 @@
+{
+  "name": "ntd-impl",
+  "version": "1.0.0",
+  "description": "NODE + EXPRESS + TS + DOCKER IMPL",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "build:start": "tsc && tsc-alias && node dist/index.js",
+    "dev": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\" \"node --watch dist/index.js\")"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "glob": "^10.3.15",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.9.2",
+    "uuidv4": "^6.2.13",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/compression": "^1.7.5",
+    "@types/connect": "^3.4.38",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/http-errors": "^2.0.4",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.12",
+    "concurrently": "^8.2.2",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Edgar Lopez Calomarde",
+    "email": "edgarlopezcalomarde@gmail.com"
+  },
+  "license": "ISC"
+}
