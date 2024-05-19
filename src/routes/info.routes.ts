@@ -1,9 +1,7 @@
-import { HttpException } from '@lib/exception/http';
 import { Router } from 'express';
 import os from 'os';
 
 const router = Router();
-
 router.get('/cpu', (req, res) => {
     const cpus = os.cpus();
     res.json(cpus);
@@ -27,4 +25,8 @@ router.get('/network', (req, res) => {
     res.json(networkInterfaces);
 });
 
-export default router;
+
+const infoRouter = Router();
+infoRouter.use("/info", router)
+
+export default infoRouter;
